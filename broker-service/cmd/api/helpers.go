@@ -14,7 +14,7 @@ type jsonResponse struct {
 }
 
 func (app *Config) readJSON(w http.ResponseWriter, r *http.Request, data any) error {
-	maxBytes := 1048576 // 1 megabyte, for DoS-atacks
+	maxBytes := 1048576 //  1 megabyte, to protect against DoS attacks
 
 	r.Body = http.MaxBytesReader(w, r.Body, int64(maxBytes))
 
