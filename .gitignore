@@ -2,3 +2,5 @@
 goMicro.code-workspace
 .idea
 .env
+broker-service/brokerApp
+frontApp.exe
